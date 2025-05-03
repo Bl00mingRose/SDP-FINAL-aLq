@@ -1,0 +1,411 @@
+{
+    "Software Development Lifecycle": [
+      {
+        "id": 1,
+        "text": "Which SDLC model emphasizes iterative development with frequent client feedback?",
+        "options": ["Waterfall","Spiral","Agile","DevOps"],
+        "correct_answer": 2,
+        "explanation": "Agile uses short iterations and frequent stakeholder feedback to refine requirements."
+      },
+      {
+        "id": 2,
+        "text": "What is the main deliverable of the Requirements Analysis phase?",
+        "options": ["Test Cases","Design Blueprint","Requirements Specification Document","Source Code"],
+        "correct_answer": 2,
+        "explanation": "The Requirements Spec Document captures all functional and non-functional requirements."
+      },
+      {
+        "id": 3,
+        "text": "In the Waterfall model, which phase comes immediately after Design?",
+        "options": ["Implementation","Maintenance","Testing","Deployment"],
+        "correct_answer": 0,
+        "explanation": "After design, the implementation (coding) phase builds the software."
+      },
+      {
+        "id": 4,
+        "text": "Which lifecycle model allows returning to previous phases at any time?",
+        "options": ["V-Model","Waterfall","Iterative","RAD"],
+        "correct_answer": 2,
+        "explanation": "Iterative models let you revisit and refine earlier phases continuously."
+      },
+      {
+        "id": 5,
+        "text": "What is the purpose of the Maintenance phase?",
+        "options": ["Correct defects","Gather requirements","Design modules","Perform unit tests"],
+        "correct_answer": 0,
+        "explanation": "Maintenance fixes bugs and improves the system after deployment."
+      },
+      {
+        "id": 6,
+        "text": "Rapid Application Development (RAD) emphasizes:",
+        "options": ["Extensive documentation","Quick prototyping","Strict phase gates","Long release cycles"],
+        "correct_answer": 1,
+        "explanation": "RAD focuses on rapidly building prototypes to gather early feedback."
+      },
+      {
+        "id": 7,
+        "text": "The V-Model maps testing activities to:",
+        "options": ["Project phases","Development phases","Deployment stages","Maintenance tasks"],
+        "correct_answer": 1,
+        "explanation": "In the V-Model, each dev phase has a corresponding testing phase."
+      }
+    ],
+    "Object-Oriented Programming": [
+      {
+        "id": 8,
+        "text": "Which principle hides the internal state of an object?",
+        "options": ["Polymorphism","Encapsulation","Abstraction","Inheritance"],
+        "correct_answer": 1,
+        "explanation": "Encapsulation restricts direct access to object data."
+      },
+      {
+        "id": 9,
+        "text": "Which concept refers to one interface, multiple implementations?",
+        "options": ["Encapsulation","Inheritance","Polymorphism","Abstraction"],
+        "correct_answer": 2,
+        "explanation": "Polymorphism lets different classes respond to the same method call."
+      },
+      {
+        "id": 10,
+        "text": "What allows a class to derive properties from another?",
+        "options": ["Inheritance","Polymorphism","Encapsulation","Composition"],
+        "correct_answer": 0,
+        "explanation": "Inheritance lets a subclass inherit methods and fields from its parent."
+      },
+      {
+        "id": 11,
+        "text": "Which OOP concept represents a real-world entity?",
+        "options": ["Function","Class","Module","Package"],
+        "correct_answer": 1,
+        "explanation": "A class is a blueprint for objects modelling real entities."
+      },
+      {
+        "id": 12,
+        "text": "What keyword in many languages creates a subclass?",
+        "options": ["extends","implements","super","inherits"],
+        "correct_answer": 0,
+        "explanation": "`extends` (Java, etc.) signals that one class inherits another."
+      },
+      {
+        "id": 13,
+        "text": "Which keyword calls the parent class constructor?",
+        "options": ["base()","parent()","super()","init()"],
+        "correct_answer": 2,
+        "explanation": "`super()` invokes the parent’s constructor in many OOP languages."
+      },
+      {
+        "id": 14,
+        "text": "What pattern restricts object instantiation to one instance?",
+        "options": ["Factory","Singleton","Observer","Decorator"],
+        "correct_answer": 1,
+        "explanation": "The Singleton pattern ensures only one instance of a class exists."
+      }
+    ],
+    "Algorithms": [
+      {
+        "id": 15,
+        "text": "What’s the time complexity of binary search on a sorted array?",
+        "options": ["O(n)","O(log n)","O(n log n)","O(1)"],
+        "correct_answer": 1,
+        "explanation": "Binary search halves the search range each step: O(log n)."
+      },
+      {
+        "id": 16,
+        "text": "Which algorithm finds the shortest path in a weighted graph?",
+        "options": ["DFS","BFS","Dijkstra’s","Prim’s"],
+        "correct_answer": 2,
+        "explanation": "Dijkstra’s algorithm computes shortest paths with non-negative weights."
+      },
+      {
+        "id": 17,
+        "text": "Quick sort’s average case time complexity is:",
+        "options": ["O(n²)","O(n log n)","O(log n)","O(n)"],
+        "correct_answer": 1,
+        "explanation": "On average, quick sort runs in O(n log n) time."
+      },
+      {
+        "id": 18,
+        "text": "Which sort is stable and uses additional memory proportional to n?",
+        "options": ["Merge Sort","Quick Sort","Heap Sort","Selection Sort"],
+        "correct_answer": 0,
+        "explanation": "Merge sort is stable and needs O(n) extra space."
+      },
+      {
+        "id": 19,
+        "text": "Which search algorithm uses a queue?",
+        "options": ["Depth-First Search","Breadth-First Search","Binary Search","Linear Search"],
+        "correct_answer": 1,
+        "explanation": "BFS uses a queue to explore neighbor nodes level by level."
+      },
+      {
+        "id": 20,
+        "text": "Dijkstra’s algorithm requires non-negative weights.",
+        "options": ["True","False","Only for directed graphs","Only for unweighted graphs"],
+        "correct_answer": 0,
+        "explanation": "Negative weights break Dijkstra’s correctness, so weights ≥0 are required."
+      },
+      {
+        "id": 21,
+        "text": "A greedy algorithm:",
+        "options": ["Always finds optimal solution","Chooses local optimum","Backtracks","Uses divide and conquer"],
+        "correct_answer": 1,
+        "explanation": "Greedy methods pick the best immediate choice, not necessarily global best."
+      }
+    ],
+    "Data Structures": [
+      {
+        "id": 22,
+        "text": "Which structure uses LIFO order?",
+        "options": ["Queue","Stack","Tree","Graph"],
+        "correct_answer": 1,
+        "explanation": "Stacks follow Last-In-First-Out discipline."
+      },
+      {
+        "id": 23,
+        "text": "Which structure uses FIFO order?",
+        "options": ["Stack","Queue","Array","HashTable"],
+        "correct_answer": 1,
+        "explanation": "Queues dequeue in the order items were enqueued."
+      },
+      {
+        "id": 24,
+        "text": "A balanced binary search tree ensures:",
+        "options": ["O(n) operations","O(log n) operations","O(1) insertion","No deletions"],
+        "correct_answer": 1,
+        "explanation": "Balance keeps depth ~log n, so operations are O(log n)."
+      },
+      {
+        "id": 25,
+        "text": "What is a hash table’s average lookup time?",
+        "options": ["O(1)","O(log n)","O(n)","O(n log n)"],
+        "correct_answer": 0,
+        "explanation": "With a good hash, average lookup is constant time O(1)."
+      },
+      {
+        "id": 26,
+        "text": "Linked list where each node has two references is called:",
+        "options": ["Single Linked List","Doubly Linked List","Circular List","Stack"],
+        "correct_answer": 1,
+        "explanation": "Doubly linked lists have `prev` and `next` pointers per node."
+      },
+      {
+        "id": 27,
+        "text": "Which structure best models hierarchical data?",
+        "options": ["Array","Graph","Tree","Queue"],
+        "correct_answer": 2,
+        "explanation": "Trees capture parent-child relationships hierarchically."
+      },
+      {
+        "id": 28,
+        "text": "A Bloom filter may yield false positives.",
+        "options": ["True","False","Always","Never"],
+        "correct_answer": 0,
+        "explanation": "Bloom filters can say 'present' erroneously but never 'absent' falsely."
+      }
+    ],
+    "Databases": [
+      {
+        "id": 29,
+        "text": "What does SQL stand for?",
+        "options": ["Structured Query Language","Simple Query Language","Sequence Query Language","Standard Query Language"],
+        "correct_answer": 0,
+        "explanation": "SQL is Structured Query Language."
+      },
+      {
+        "id": 30,
+        "text": "Which normal form removes transitive dependencies?",
+        "options": ["1NF","2NF","3NF","BCNF"],
+        "correct_answer": 2,
+        "explanation": "3NF eliminates transitive dependencies between non-key fields."
+      },
+      {
+        "id": 31,
+        "text": "In ACID properties, what does “I” stand for?",
+        "options": ["Isolation","Integrity","Increments","Indexing"],
+        "correct_answer": 0,
+        "explanation": "I is Isolation: transactions should not interfere with each other."
+      },
+      {
+        "id": 32,
+        "text": "Which SQL command removes a row?",
+        "options": ["REMOVE","DELETE","DROP","TRUNCATE"],
+        "correct_answer": 1,
+        "explanation": "`DELETE` removes rows; `DROP` deletes entire tables."
+      },
+      {
+        "id": 33,
+        "text": "A JOIN that returns all rows from the left table is:",
+        "options": ["INNER JOIN","LEFT JOIN","RIGHT JOIN","FULL JOIN"],
+        "correct_answer": 1,
+        "explanation": "LEFT JOIN keeps every row from the left table, matching or not."
+      },
+      {
+        "id": 34,
+        "text": "A non-relational database example:",
+        "options": ["MySQL","MongoDB","PostgreSQL","Oracle"],
+        "correct_answer": 1,
+        "explanation": "MongoDB is a document-oriented NoSQL database."
+      },
+      {
+        "id": 35,
+        "text": "An index improves:",
+        "options": ["Storage space","Data security","Query performance","Data redundancy"],
+        "correct_answer": 2,
+        "explanation": "Indexes speed up searches at the cost of some extra storage."
+      }
+    ],
+    "Operating Systems": [
+      {
+        "id": 36,
+        "text": "Which OS concept manages multiple processes?",
+        "options": ["Paging","Multithreading","Deadlock","Process Scheduling"],
+        "correct_answer": 3,
+        "explanation": "Process Scheduling controls which process runs when."
+      },
+      {
+        "id": 37,
+        "text": "Virtual memory uses:",
+        "options": ["RAM only","Disk only","RAM + Disk","CPU only"],
+        "correct_answer": 2,
+        "explanation": "Virtual memory combines RAM and disk to extend address space."
+      },
+      {
+        "id": 38,
+        "text": "A race condition is a type of:",
+        "options": ["Deadlock","Security risk","Concurrency bug","Memory leak"],
+        "correct_answer": 2,
+        "explanation": "Race conditions occur when processes interleave unpredictably."
+      },
+      {
+        "id": 39,
+        "text": "Round-robin scheduling uses:",
+        "options": ["Priorities","Time slices","Random order","Shortest job first"],
+        "correct_answer": 1,
+        "explanation": "It allocates fixed time slices to each process in turn."
+      },
+      {
+        "id": 40,
+        "text": "In OS, a semaphore is used for:",
+        "options": ["Encryption","Synchronization","Decryption","Compilation"],
+        "correct_answer": 1,
+        "explanation": "Semaphores coordinate access to shared resources."
+      },
+      {
+        "id": 41,
+        "text": "Thrashing occurs when:",
+        "options": ["CPU idle","Excessive paging","Low memory usage","High throughput"],
+        "correct_answer": 1,
+        "explanation": "Thrashing is excessive page swapping, degrading performance."
+      },
+      {
+        "id": 42,
+        "text": "Kernel mode vs user mode: the kernel has:",
+        "options": ["Less privileges","More privileges","Same privileges","No privileges"],
+        "correct_answer": 1,
+        "explanation": "Kernel mode code runs with full hardware privileges."
+      }
+    ],
+    "Software Testing": [
+      {
+        "id": 43,
+        "text": "Unit testing tests:",
+        "options": ["Whole system","Individual components","User acceptance","Performance"],
+        "correct_answer": 1,
+        "explanation": "Unit tests verify small code units (e.g., functions) in isolation."
+      },
+      {
+        "id": 44,
+        "text": "Integration testing tests:",
+        "options": ["Modules together","Single module","UI only","Database only"],
+        "correct_answer": 0,
+        "explanation": "Integration tests check interactions between modules."
+      },
+      {
+        "id": 45,
+        "text": "Test coverage measures:",
+        "options": ["Number of tests","Code exercised by tests","Test duration","Bugs found"],
+        "correct_answer": 1,
+        "explanation": "Coverage shows which parts of code were executed by tests."
+      },
+      {
+        "id": 46,
+        "text": "Mock objects are used to:",
+        "options": ["Generate UI","Simulate dependencies","Encrypt data","Manage memory"],
+        "correct_answer": 1,
+        "explanation": "Mocks stand in for real dependencies to isolate units under test."
+      },
+      {
+        "id": 47,
+        "text": "Regression testing checks:",
+        "options": ["New features","Past defects","User interface","Performance"],
+        "correct_answer": 1,
+        "explanation": "It ensures that older functionality still works after changes."
+      },
+      {
+        "id": 48,
+        "text": "Black box testing focuses on:",
+        "options": ["Internal code","External behavior","Database structure","Architecture"],
+        "correct_answer": 1,
+        "explanation": "Black-box tests treat the system as a “closed box,” checking outputs."
+      },
+      {
+        "id": 49,
+        "text": "Load testing measures:",
+        "options": ["Functionality","Performance under load","Security","Documentation"],
+        "correct_answer": 1,
+        "explanation": "Load tests check how well a system handles high user/concurrent load."
+      }
+    ],
+    "Agile Methodologies": [
+      {
+        "id": 50,
+        "text": "Scrum uses:",
+        "options": ["Iterations called sprints","Gantt charts","Waterfall phases","Long releases"],
+        "correct_answer": 0,
+        "explanation": "Scrum organizes work into fixed-length sprints."
+      },
+      {
+        "id": 51,
+        "text": "In Scrum, who prioritizes the backlog?",
+        "options": ["Scrum Master","Product Owner","Development Team","Stakeholders"],
+        "correct_answer": 1,
+        "explanation": "The Product Owner orders the Product Backlog items."
+      },
+      {
+        "id": 52,
+        "text": "Kanban emphasizes:",
+        "options": ["Fixed iterations","Continuous flow","Time-boxed sprints","Upfront planning"],
+        "correct_answer": 1,
+        "explanation": "Kanban focuses on continuous delivery and limiting WIP."
+      },
+      {
+        "id": 53,
+        "text": "A user story template often starts with:",
+        "options": ["As a user","I want","So that","All of the above"],
+        "correct_answer": 3,
+        "explanation": "Full template: “As a <role>, I want <goal> so that <benefit>.”"
+      },
+      {
+        "id": 54,
+        "text": "Daily stand-ups typically last:",
+        "options": ["5 minutes","15 minutes","1 hour","2 hours"],
+        "correct_answer": 1,
+        "explanation": "Stand-ups are time-boxed to about 15 minutes."
+      },
+      {
+        "id": 55,
+        "text": "Velocity in Agile measures:",
+        "options": ["Team size","Completed work per sprint","Defects per sprint","Customer satisfaction"],
+        "correct_answer": 1,
+        "explanation": "Velocity is the amount of story points completed each sprint."
+      },
+      {
+        "id": 56,
+        "text": "A retrospective occurs:",
+        "options": ["Before sprint","After sprint","During sprint","Never"],
+        "correct_answer": 1,
+        "explanation": "Retrospectives happen after each sprint to reflect and improve."
+      }
+    ]
+  }
+  

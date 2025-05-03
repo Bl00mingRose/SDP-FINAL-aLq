@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="quiz-container">
+  <div class="quiz-header">
+    <h2>{{ topic }} Quiz</h2>
+    <div class="progress-bar">
+      <div class="progress" id="quiz-progress"></div>
+    </div>
+  </div>
+
+  <form id="quiz-form" action="{{ url_for('submit_quiz') }}" method="POST">
+    <input type="hidden" name="topic" value="{{ topic }}">
+
+    {% for question in questions %}
+    <div class="question-card" id="q{{ question.id }}"
+         {% if not loop.first %}style="display:none"{% endif %}
+         data-correct="{{ question.correct_answer }}"
+         data-explanation="{{ question.explanation|e }}">
+      <div class="question-text">{{ loop.index }}. {{ question.text }}</div>
+
+      <div class="options-container">
+        {% for opt in question.options %}
+        <label class="option">
+          <input type="radio" name="q_{{ question.id }}" value="{{ loop.index0 }}" required>
+          <span class="option-text">{{ opt }}</span>
+        </label>
+        {% endfor %}
+      </div>
+
+      <div class="navigation-buttons">
+        {% if not loop.first %}
+        <button type="button" class="nav-btn prev-btn">Previous</button>
+        {% endif %}
+        {% if not loop.last %}
+        <button type="button" class="nav-btn next-btn">Next</button>
+        {% else %}
+        <button type="submit" class="submit-btn">Submit Quiz</button>
+        {% endif %}
+      </div>
+    </div>
+    {% endfor %}
+
+  </form>
+</div>
+
+<!-- feedback modal -->
+<div id="feedback-modal" class="modal">
+  <div class="modal-content">
+    <p id="feedback-text"></p>
+    <p id="feedback-explanation"></p>
+    <button id="continue-btn" class="btn-primary">Continue</button>
+  </div>
+</div>
+
+<script src="{{ url_for('static', filename='quiz.js') }}"></script>
+{% endblock %}

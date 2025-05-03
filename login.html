@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="auth-card">
+  <h2 class="form-title">Login</h2>
+  <form method="POST" class="auth-form">
+    <div class="form-group">
+      <label for="username">Username</label>
+      <input id="username" type="text" name="username" required autofocus />
+    </div>
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input id="password" type="password" name="password" required />
+    </div>
+    <button type="submit" class="btn btn-primary">Log In</button>
+  </form>
+  <p class="auth-prompt">
+    Don't have an account?
+    <a href="{{ url_for('signup') }}">Sign Up</a>
+  </p>
+</div>
+{% endblock %}

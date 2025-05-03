@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="dashboard-container">
+  <!-- Welcome and recommendation -->
+  <h2>Welcome, {{ username }}!</h2>
+
+  {% if recommendation %}
+  <div class="recommendation-card">
+    <p>🔍 <strong>Recommended Topic:</strong> {{ recommendation }}</p>
+    <a href="{{ url_for('quiz', topic=recommendation) }}" class="btn-primary">
+      Start Quiz
+    </a>
+  </div>
+  {% endif %}
+
+  <!-- Performance overview -->
+  <h3>Your Progress</h3>
+  {% if performances %}
+    {% for perf in performances %}
+    <div class="progress-item">
+      <span class="topic-label">{{ perf.topic }}</span>
+      <div class="bar-bg">
+        <div class="bar-fill" data-score="{{ perf.score }}"></div>
+      </div>
+      <span class="score-label">{{ perf.score|round(1) }}%</span>
+    </div>
+    {% endfor %}
+  {% else %}
+    <p>No performance data yet. Take a quiz to get started!</p>
+  {% endif %}
+
+  <!-- New: Quiz type selection -->
+  <h3>Available Quizzes</h3>
+  <ul class="quiz-type-list">
+    <li>
+      <a href="{{ url_for('random_quiz') }}" class="btn-secondary">
+        Mixed-Topic Quiz
+      </a>
+    </li>
+    {% for topic in topics %}
+    <li>
+      <a href="{{ url_for('quiz', topic=topic) }}" class="btn-secondary">
+        {{ topic }} Quiz
+      </a>
+    </li>
+    {% endfor %}
+  </ul>
+</div>
+
+<!-- JS to apply .bar-fill widths -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.bar-fill').forEach(function(el) {
+    const pct = parseFloat(el.dataset.score) || 0;
+    el.style.width = pct + '%';
+  });
+});
+</script>
+{% endblock %}

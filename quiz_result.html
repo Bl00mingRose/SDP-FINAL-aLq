@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="result-container">
+  <div class="result-card">
+    <h2>Quiz Results: {{ topic }}</h2>
+    <div class="score-circle" style="--pct: {{ score }}%">
+      <span>{{ score|round(1) }}%</span>
+    </div>
+    <p>You got {{ correct }} out of {{ total }} correct.</p>
+
+    {% if wrong_questions %}
+      <h3>Review Incorrect Answers</h3>
+      {% for w in wrong_questions %}
+      <div class="review-card">
+        <p class="review-question">{{ w.text }}</p>
+        <p>
+          <strong>Your answer:</strong>
+          <span class="your-answer">{{ w.options[w.selected] }}</span>
+        </p>
+        <p>
+          <strong>Correct answer:</strong>
+          <span class="correct-answer">{{ w.options[w.correct] }}</span>
+        </p>
+        {% if w.explanation %}
+        <p class="review-explanation">
+          <strong>Explanation:</strong><br>
+          {{ w.explanation }}
+        </p>
+        {% endif %}
+      </div>
+      {% endfor %}
+    {% endif %}
+
+    <div class="result-actions">
+      <a href="{{ url_for('quiz', topic=topic) }}" class="btn-primary">Try Again</a>
+      <a href="{{ url_for('dashboard') }}" class="btn-secondary">Back to Dashboard</a>
+    </div>
+  </div>
+</div>
+{% endblock %}
